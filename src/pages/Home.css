@@ -1,0 +1,184 @@
+/* ===== GLOBAL & BASE ===== */
+.App {
+  max-width: 400px;
+
+  margin: 50px auto;
+  text-align: center;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 20px 35px 10px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+  position: absolute;
+  inset: 0;
+}
+
+/* Heading */
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 1.8rem;
+  letter-spacing: -0.3px;
+}
+
+/* Input + Button row (unchanged structure) */
+.input-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+/* Input field */
+input {
+  flex: 1;
+  padding: 12px 18px;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 2rem;
+  outline: none;
+  transition: 0.2s;
+  background-color: white;
+  font-weight: 500;
+}
+
+input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+
+/* Buttons – same classes, fresh look */
+button {
+  padding: 10px 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 0.9rem;
+  background-color: #e2e8f0;
+  color: #1e293b;
+}
+
+.add-btn {
+  background: linear-gradient(95deg, #6366f1, #8b5cf6);
+  color: white;
+  box-shadow: 0 8px 14px -6px rgba(99, 102, 241, 0.3);
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 12px 20px -8px rgba(99, 102, 241, 0.4);
+}
+
+.update-btn {
+  background: #f59e0b;
+  color: white;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+}
+
+.update-btn:hover {
+  background: #d97706;
+  transform: scale(0.98);
+}
+
+/* list container (ul) – styled without adding class */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+/* each task (li) – styled elegantly */
+li {
+  background: rgb(211, 197, 197);
+  margin-bottom: 12px;
+  padding: 12px 20px;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px -12px rgba(0, 0, 0, 0.15);
+  background: #fefeff;
+}
+
+/* task text */
+li span {
+  flex: 1;
+  text-align: left;
+  font-weight: 500;
+  color: #0f172a;
+  word-break: break-word;
+}
+
+/* Buttons inside li (built‑in selector) */
+li button {
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  background: #4e5155;
+  color: #334155;
+  transition: 0.2s;
+}
+
+li button:first-of-type {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+li button:first-of-type:hover {
+  background: #fecaca;
+  transform: scale(0.96);
+}
+
+li button:last-of-type {
+  background: #bdc4db;
+  color: #4338ca;
+}
+
+li button:last-of-type:hover {
+  background: #c7d2fe;
+  transform: scale(0.96);
+}
+
+/* Empty state message */
+p {
+  text-align: center;
+  color: #64748b;
+  font-style: italic;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f1f5f9;
+  border-radius: 2rem;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .App {
+    margin: 20px;
+    padding: 1.5rem;
+  }
+  .input-container {
+    flex-direction: column;
+  }
+  button {
+    width: 100%;
+  }
+}
